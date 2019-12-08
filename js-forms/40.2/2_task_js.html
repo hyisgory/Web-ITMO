@@ -1,0 +1,30 @@
+<html>
+<body>
+<a name="A1">Something</a></p>
+<a name="A2">Something again</a></p>
+<a name="A3">Again something!</a></p>
+<a href="#A1">first_link</a></p>
+<a href="#A2">second_link</a></p>
+<img id="fim" src="s1200.webp" WIDTH="200px" HEIGHT="300px">
+<img id="sim" src="09a.jpg" WIDTH="220px" HEIGHT="300px">
+<img id="tim" src="481101.jpg" WIDTH="230px" HEIGHT="300px">
+<img id="foim" src="s1200 (1).webp" WIDTH="210px" HEIGHT="300px"></p>
+<script  type="text/javascript">
+document.write("Anchors: " + document.anchors.length + "</p>");
+document.write("Links: " + document.links.length + "</p>");
+document.write("First anchor is " + document.anchors[0].innerHTML + "</p>");
+document.write("Images: " + document.images.length + "</p>");
+document.write("Width of first image: " + document.images[1].height + "</p>");
+var max = document.images[0].width;
+for (var i = 0; i < document.images.length; i++)
+	if (max < document.images[i].width) {
+	max = document.images[i].width;
+	}
+document.write("Width of widthest image: " + max + "</p>");
+var summ = 0;
+for (var i = 0; i < document.images.length; i++)
+	summ = summ + document.images[i].width;
+document.write("Summ of width images: " + summ + "</p>");
+</script>
+</body>
+</html>
