@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tables</title>
+	<style>
+ td {
+	border: 1px solid;
+	vertical-align: top;
+}
+#TheTable {
+	border: 1px solid;
+}
+</style>
+</head>
+<body>
+	<input type="button" value="Add row" onclick="createTable()" />
+	<input type='button' value="Delete row" onclick="deleteRoww()" />
+	<p><input type='button' value="Increase cellpadding" onclick="increaseCellPadding()" />
+	<input type='button' value="Increase cellspacing" onclick="increaseCellSpacing()" /></p>
+	<p><input type='button' value="Reduce cellpadding" onclick="reduceCellPadding()" />
+	<input type='button' value="Reduce cellspacing" onclick="reduceCellSpacing()" /></p>
+	<p><input type='button' value="Add cell" onclick="addCell()" />
+	<input type='button' value="Delete cell" onclick="deleteCell()" /></p>
+	<p><div><input type='button' value="Align row" onclick="alignCells()" /></div></p>
+	<p><input type='button' value="Increase Border Width" onclick="increaseBorderWidth()" />
+	<input type='button' value="Reduce Border Width" onclick="reduceBorderWidth()" /></p>
+	<p><div><input type='button' value="Align any cell" onclick="alignAnyCell()" /></div></p>
+	<p><input type='button' value="Vertical align" onclick="vertAlignCells()" />
+	<input type='button' value="Horizontal align" onclick="horizontalCells()" /></p>
+	<p><div><input type='button' value="Change inner" onclick="changeInner()" /></div></p>
+	<p><div><input type='button' value="Colspan" onclick="colspanDo()" /></div></p>
+
+	<h3>The table to be edited is right below</h3>
+	<table  cellpadding="0" cellspacing="0" id="TheTable" >
+		<tr>
+			<th width="300px" colspan="2">The header is supposed to be here</th>
+		</tr>
+	  	<tr>
+	    	<td width="150px">cell 1</td>
+	    	<td width="150px">cell 2</td>
+	  	</tr>
+	  	<tr>
+	    	<td width="150px">cell 3</td>
+	    	<td width="150px">cell 4</td>
+	  	</tr>
+	</table>
+
+<script src="script.js"></script>
+</body>
+</html>
