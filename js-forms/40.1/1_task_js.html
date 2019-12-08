@@ -1,0 +1,25 @@
+<html>
+<body>
+<script type="text/javascript">
+var out = "I love the Web programming";
+document.write(out + "</p>");
+var t = 0;
+  for (var i = 0; i < out.length; i++)
+    if (out[i] === " ") {
+      t = t +1;
+  }
+  t = t + 1;
+document.write(t + " words </p>" );
+document.write(out.length + " letters and");
+document.write(window.location.href);
+var f = window.location.href;
+f = f.substring(f.lastIndexOf("/") + 1);
+document.write("</p> <h2>" + f + "</h2>");
+document.write("<Port: " + window.location.port + "</p>");
+document.write("Protocol: " + window.location.protocol + "</p>");
+document.write("Host: " + window.location.host + "</p>");
+document.write("Path: " + window.location.pathname + "</p>");
+document.write("Search: " + window.location.search + "</p></div>");
+</script>
+</body>
+</html>
