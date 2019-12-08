@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class='imgcontainer'>
+      <img id='cat0' src="cat0.jpg" alt="cat0" name='cat0'>
+      <img src="cat1.jpg" alt="cat1">
+    </div>
+    <br>
+    <button type="button" onclick="alignimgs()">align images</button>
+    <button type="button" onclick="addborder()">add border to image</button>
+    <button type="button" onclick="changesize()">change image size</button>
+    <button type="button" onclick="changesrc()">change image source</button>
+    <p>image alt text: <b id="cat0_alt"></b></p>
+    <p>image name text: <b id="cat0_name"></b></p>
+    <p onmousedown="showMouseBtn()">mouse button pressed: <b id='mouse_btn'></b></p>
+    <p onkeydown="showKeyCode()" tabindex="0">key pressed: <b id='pressed_key'></b></p>
+    <div id='mousearea' onmousemove="showMouseCoords()">
+      <p>move your mouse over me!</p>
+      <p>mouse position on page: <b id='mousepos_page'></b></p>
+      <p>mouse position on screen: <b id='mousepos_screen'></b></p>
+    </div>
+    <div
+        id='clickwhat'
+        onclick='showtarget()'
+        name='mainclk' tabindex='1'
+        onmousemove="showevent(event)"
+        onkeydown="showevent(event)"
+        onkeyup="showevent(event)">
+      <p name='clk1'>am clickable</p>
+      <p name='clk2'>me too</p>
+      <p name='clk3'>so am I</p>
+      <p name='clk4'>high five!</p>
+      <p name='clkdisplay'>clicked on element named: <b name='clkname' id='clkname'></b></p>
+      <p name='clk_eventdisplay'>this event just happened: <b name='clk_eventname' id='clk_eventname'></b></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
