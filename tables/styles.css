@@ -1,0 +1,41 @@
+#botton_1 {
+	height: 100px;
+	width: 100px;
+	background: black;
+}
+
+table {
+	color: black;
+	font-size: 15pt;
+	border-collapse: collapse;
+}
+
+tr, td {
+	border: black solid 3px;
+	text-align: center;
+}
+
+#create_table {
+	background: lightblue;
+}
+
+#tablitsa {
+	padding: 20px;
+}
+
+#fun {
+	display: none;
+}
+
+#change_size {
+	display:table-cell;
+}
+
+#titlee {
+	display:table-cell;
+}
+
+#area {
+	display: table-cell;
+	width: 40px;
+}

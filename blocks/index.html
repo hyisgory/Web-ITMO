@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Блочная верстка. Вариант 10</title>
+	<style>
+		body{
+			text-align: center;
+			font-size: 250%;
+		}
+		#header{
+			background-color: yellow;
+			position: fixed; /* Фиксированное положение */
+			right: 0; top: 0; /* Левый нижний угол */
+			padding: 10px; /* Поля вокруг текста */
+			color: white; /* Цвет текста */
+			width: 100%;
+			height: 50px;
+		}
+		#content{
+			width: 100%;
+			margin: 0;
+		}
+		#block1{
+			width: 200px;
+			height: 250px;
+			left: 50px;
+			top: 50px;
+			position: relative;
+			background-color: green;
+			padding-top: 100px;
+			box-sizing:border-box;
+		}
+		#block2{
+			width: 200px;
+			height: 250px;
+			left: 200px;
+			position: relative;
+			background-color: orange;
+			padding-top: 100px;
+			box-sizing:border-box;
+		}
+		#block3{
+			width: 1400px;
+			height: 120px;
+			left: 350px;
+			top: -30px;
+			position: relative;
+			background-color: green;
+			padding-top: 30px;
+			box-sizing:border-box;
+		}
+		#menu{
+			width: 300px;
+			height: 300px;
+			float: right;
+			top: -550px;
+			right: 50px; 
+			position: relative;
+			background-color: orange;
+			padding-top: 50px;
+			box-sizing:border-box;
+		}
+		#footer{
+			background-color: red;
+			position: fixed; /* Фиксированное положение */
+			left: 0; bottom: 0; /* Левый нижний угол */
+			padding: 10px; /* Поля вокруг текста */
+			color: white; /* Цвет текста */
+			width: 100%;
+			height: 80px;
+		}
+	</style>
+</head>
+<body>
+	<div id="header">Header</div>
+	</br>
+	<div id="content">
+		<div id="block1">
+			Block1
+		</div>
+		<div id="block2">
+			Block2
+		</div>
+		<div id="block3">
+			Block3
+		</div>
+		<div id="menu">
+			<a href="http://htmlbook.ru"> Пособие по HTML </a> <br>
+			<a href="https://vk.com"> Vk </a> <br>
+			<a href="https://youtube.com"> Youtube </a> <br>
+			<a href="https://yandex.ru"> Яндекс </a> <br>
+		</div>
+	</div>
+	<div id="footer">Footer</div>
+</body>
+</html>

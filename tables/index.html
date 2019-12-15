@@ -1,0 +1,125 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script type="text/javascript">
+function mkT() {
+	var col = 0;
+	var row = 0;
+	var id = 0;
+	var htmll = "<table id='tab'><caption></caption><tr>";
+	col = document.getElementById("colomns").value;
+	row = document.getElementById("rows").value;
+	for (i = 0; i < col; i++) {
+		for (j = 0; j < row; j++) {
+			htmll += "<td><div id='l" + id + "'><div id='k" + id + "'><textarea id='t" + id + "'></textarea><button onclick='hideass(" + id + ")'>Сохранить</button></div></td>";
+			id += 1;
+			}
+		htmll += "</tr><tr>";
+		}
+	document.getElementById('create_table').style.display = 'none';
+	document.getElementById('tablitsa').innerHTML = htmll;
+	document.getElementById('fun').style.display = 'table';
+}
+function hideass(p) {
+	var x = "k" + p;
+	var z = "t" + p;
+	var hyi = "l" + p;
+	document.getElementById(x).style.display = 'none';
+	document.getElementById(hyi).innerHTML += document.getElementById(z).value;
+}
+function chgBt() {
+	var hhh = "Применить";
+	hhh += " " + document.getElementById('width_t').value + "px ";
+	hhh += " с рамкой " + document.getElementById('borders').value;
+	document.getElementById('button_2').innerHTML = hhh;
+}
+function chgTb() {
+	document.getElementById('tab').style.width = document.getElementById('width_t').value;
+	document.getElementById('tab').style.border = document.getElementById('borders').value;
+}
+function chTl() {
+	document.getElementById('tab').caption.innerHTML = document.getElementById('title_input').value;
+}
+function RAN(){
+	
+	alert(document.getElementById('tab').rows.lenght);
+}
+function dlRw() {
+  	var x = document.getElementById("tab");
+  	x.deleteRow(document.getElementById('rows_input').value);
+}
+function RAN(){
+	var mag = Math.floor(Math.random() * 4 + 1);
+	var row = Math.floor(Math.random() * 4 + 1);
+	var column = Math.floor(Math.random() * 4 + 1);
+	switch (mag){
+		case 1: {
+			document.getElementById('tab').getElementsByTagName("tr")[row].getElementsByTagName("td")[column].style.background = "red";
+			break; }
+		case 2: {
+			document.getElementById('tab').getElementsByTagName("tr")[row].getElementsByTagName("td")[column].style.background = "green";
+			break; }
+		case 3: {
+			document.getElementById('tab').getElementsByTagName("tr")[row].getElementsByTagName("td")[column].style.color = "blue";
+			break; }
+		case 4: {
+			document.getElementById('tab').getElementsByTagName("tr")[row].getElementsByTagName("td")[column].style.height = "100px";
+			break; }
+	}
+}
+function DLTB(){
+		document.getElementById('create_table').style.display = "inline";
+		document.getElementById('tab').remove();
+		document.getElementById('fun').style.display = 'none';
+	}
+</script>
+</head>
+<body><center>
+<div id="create_table">
+<p>Укажите количество столбцов</p>
+<input type="number" id="colomns">
+<p>Укажите количество строк</p>
+<input id="rows"></br>
+<button id="button_1" onclick="mkT()">xxx</button></div>
+</br>
+<div id="tablitsa"></div>
+</center>
+<div id="fun">
+	<div id="change_size">
+	<center>
+	<p>Введите ширину таблицы</p>
+	<input type="number" id="width_t" maxlength="3" onchange="chgBt()"></input>
+	<p>Выберите тип рамки</p>
+	<select id="borders" value="отстствует" onchange="chgBt()">
+		<option value="dotted">Точками</option>
+		<option value="dashed">Тире</option>
+		<option value="solid">Сплошная</option>
+		<option value="double">Двойная</option>
+		<option value="groove">с разными цветами</option>
+	</select>
+	</br>
+	<button id="button_2" onclick="chgTb()">Применить</button>
+	</center>
+	</div>
+	<div id="area"> </div>
+	<div id="titlee">
+	<center>
+	</br>
+	<input type="text" id="title_input"></input>
+	<button type="button" onclick="chTl()">Применить заголовок таблицы</button>
+	</center>
+	</div>
+	<div id="area"> </div>
+	<div id="delR"></br>
+	<center>
+	<input type="text" id="rows_input"></input>
+	<button type="button" onclick="dlRw()">Удалить строку</button>
+	<div id="area"> </div></br>
+	<button type="button" onclick="RAN()">Magic</button>
+	<div id="area"> </div></br>
+	<button type="button" onclick="DLTB()">Удалить таблицу</button>
+	</center>
+	</div>
+</div>
+</body>
+</html>
